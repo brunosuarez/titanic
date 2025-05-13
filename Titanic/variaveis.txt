@@ -1,0 +1,26 @@
+RELEVANTES:
+
+Survived (Sobreviveu? 0 = Não, 1 = Sim) → Variável alvo
+Pclass (Classe do passageiro: 1, 2, 3)
+Sex (Sexo: male, female)
+Age (Idade, pode ser discretizada: Criança (<12), Adulto (12-60), Idoso (>60))
+Fare (Valor da passagem, pode ser categorizado: Baixo, Médio, Alto)
+SibSp (Número de irmãos/cônjuges a bordo)
+Parch (Número de pais/filhos a bordo)
+
+ESTRUTURA:
+Pclass → Fare  
+Pclass → Survived  
+Sex → Survived  
+Age → Survived  
+Fare → Survived  
+SibSp → Survived  
+Parch → Survived  
+
+ARESTAS:
+Pclass → Fare: Quanto maior a classe (1ª), maior o preço da passagem.
+Pclass → Survived: Passageiros de 1ª classe tiveram prioridade nos botes.
+Sex → Survived: Mulheres e crianças tiveram prioridade ("Women and children first").
+Age → Survived: Crianças e idosos tiveram mais chances de sobreviver.
+Fare → Survived: Quem pagou mais (classe alta) teve mais chances.
+SibSp/Parch → Survived: Famílias podem ter se ajudado ou atrapalhado na evacuação.
